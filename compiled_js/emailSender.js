@@ -41,15 +41,15 @@ var fetchReceiversLib = require('./fetchReceivers');
 var nodemailer = require('nodemailer');
 var EmailSender = /** @class */ (function () {
     function EmailSender() {
-        this.emailSender = 'uig11538@contiwan.com';
+        this.emailSender = 'outlook_account';
         this.emailTransporter = nodemailer.createTransport({
-            host: 'smtpHubEu.contiwan.com',
+            host: 'smtp.office365.com',
             port: 587,
             service: 'office365',
             secure: false,
             auth: {
                 user: this.emailSender,
-                pass: 'Counter@pp01',
+                pass: 'password',
             },
             debug: false,
             logger: true,
