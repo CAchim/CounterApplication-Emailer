@@ -41,7 +41,7 @@ var fetchReceiversLib = require('./fetchReceivers');
 var nodemailer = require('nodemailer');
 var EmailSender = /** @class */ (function () {
     function EmailSender() {
-        this.emailSender = 'uig11538@contiwan.com';
+        this.emailSender = 'uig11538';
         this.emailTransporter = nodemailer.createTransport({
             host: 'smtpHubEu.contiwan.com',
             port: 587,
