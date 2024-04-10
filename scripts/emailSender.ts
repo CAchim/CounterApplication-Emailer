@@ -3,17 +3,17 @@ const nodemailer = require('nodemailer');
 
 export class EmailSender {
   emailTransporter
-  emailSender: string = 'counterapplication@outlook.com'//'counterapp@yahoo.com'
+  emailSender: string = 'outlook_account'
 
   constructor() {
     this.emailTransporter = nodemailer.createTransport({
-      host: 'smtp.office365.com'/**'smtp.mail.yahoo.com'*/,
-      port: 587,//465,
-      service: 'office365',//'yahoo',
+      host: 'smtp.office365.com',
+      port: 587,
+      service: 'office365',
       secure: false,
       auth: {
         user: this.emailSender,
-        pass: 'hcyyxszpwsqvtcmj',//'toulzvsvhnwnveaj',
+        pass: 'password',
       },
       debug: false,
       logger: true,
