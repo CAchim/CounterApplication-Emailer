@@ -41,15 +41,15 @@ var nodemailer = require('nodemailer');
 var database_1 = require("../lib/database");
 var EmailSender = /** @class */ (function () {
     function EmailSender() {
-        this.emailSender = 'counterapp@yahoo.com';
+        this.emailSender = 'uig11538@contiwan.com';
         this.emailTransporter = nodemailer.createTransport({
-            host: 'smtp.mail.yahoo.com',
-            port: 465,
-            service: 'yahoo',
+            host: 'smtpHubEu.contiwan.com',
+            port: 587,
+            service: 'office365',
             secure: false,
             auth: {
                 user: this.emailSender,
-                pass: 'toulzvsvhnwnveaj',
+                pass: 'Counter@pp01',
             },
             debug: false,
             logger: true,

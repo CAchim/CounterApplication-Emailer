@@ -3,17 +3,20 @@ const nodemailer = require('nodemailer');
 
 export class EmailSender {
   emailTransporter
-  emailSender: string = 'outlook_account'
+  emailSender: string = 'counterapplication.au_tm_sa@continental-corporation.com'
 
   constructor() {
     this.emailTransporter = nodemailer.createTransport({
-      host: 'smtp.office365.com',
+      host: 'smtpHubEu.contiwan.com',
       port: 587,
       service: 'office365',
       secure: false,
       auth: {
-        user: this.emailSender,
-        pass: 'password',
+        user: 'uig11538',//this.emailSender,
+        pass: 'Counter@pp01',
+      },
+      tls: {
+        rejectUnauthorized: false,
       },
       debug: false,
       logger: true,
@@ -44,7 +47,7 @@ export class EmailSender {
     const finalReceiver = toParam.concat(';',tmp2)
     console.log(finalReceiver)
 
-    const validEmails = parseEmailField(tmp2)//(finalReceiver)
+    const validEmails = parseEmailField(finalReceiver)
     if (validEmails == '') {
       return false
     }

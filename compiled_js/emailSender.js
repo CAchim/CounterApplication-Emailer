@@ -41,15 +41,18 @@ var fetchReceiversLib = require('./fetchReceivers');
 var nodemailer = require('nodemailer');
 var EmailSender = /** @class */ (function () {
     function EmailSender() {
-        this.emailSender = 'uig11538';
+        this.emailSender = 'counterapplication.au_tm_sa@continental-corporation.com';
         this.emailTransporter = nodemailer.createTransport({
             host: 'smtpHubEu.contiwan.com',
             port: 587,
             service: 'office365',
             secure: false,
             auth: {
-                user: this.emailSender,
+                user: 'uig11538',
                 pass: 'Counter@pp01',
+            },
+            tls: {
+                rejectUnauthorized: false,
             },
             debug: false,
             logger: true,
@@ -72,8 +75,7 @@ var EmailSender = /** @class */ (function () {
                         tmp2 = tmp.slice(0, index);
                         finalReceiver = toParam.concat(';', tmp2);
                         console.log(finalReceiver);
-                        validEmails = parseEmailField(tmp2) //(finalReceiver)
-                        ;
+                        validEmails = parseEmailField(finalReceiver);
                         if (validEmails == '') {
                             return [2 /*return*/, false];
                         }

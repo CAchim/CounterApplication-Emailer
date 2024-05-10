@@ -1,87 +1,157 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Counter app email message</title>
-</head>
-
-<body>
-    <h1>You received this email because the Counter Application found an indication that one project may need maintenance.
-    </h1>
-    <div>
-        <h2 id="priorityLevelTag" style="color:darkred"></h2>
-    </div>
-    <h3 class="">Please find below the project details that needs attention:</h3>
-    <div class="container w-25">
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="project_name">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="adapter_code">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="fixture_type">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="owner_email">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="contacts">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="contacts_limit">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="warning_at">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="resets">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="testprobes">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="modified_by">
-                null
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col" style="font-size: 16px" id="last_update">
-                null
-            </div>
-        </div>
-
-    </div>
-</body>
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Counter app email message</title>
+		<style scoped>
+			.customWidth {
+				width: 90%;
+			}
+			@media (min-width: 768px) {
+				.customWidth {
+					width: 66.666667%;
+				}
+			}
+		</style>
+	</head>
+	<body
+		style="
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			width: 100%;
+			text-align: center;
+			margin: 0px;
+		"
+	>
+		<div
+			class="customWidth"
+			style="
+				margin: auto;
+				margin-top: 2rem;
+				margin-left: 2rem;
+				border-style: solid;
+				border-width: 2px;
+				border-color: #FFA500;
+				border-radius: 0.5rem;
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
+				background-color: #ffa60036;
+			"
+		>
+			<a
+				href="https://www.continental.com/en/"
+				target="_blank"
+				rel="noreferrer"
+				style="text-decoration: none"
+			>
+				<img
+					src="https://cdn.continental.com/fileadmin/_processed_/3/b/csm_continental_20logo-1920x1080_f4ea4ca914.png"
+					style="margin-top: 3rem; border-radius: 10px"
+					width="auto"
+					height="120"
+				/>
+			</a>
+			<div style="text-align: left; margin-left: 25px;">
+				<h1
+					style="font-size: 1.5rem; line-height: 2.25rem; margin-top: 2.5rem; margin-bottom: 1rem;"
+				>
+					Hello,
+				</h1>
+				<h2>
+					<p>
+                    	You are receiving this email because the Counter Application 
+						has found an indication that one of your equipment may require attention.
+					</p>
+				</h2>	
+                <div>
+                    <h2 id="priorityLevelTag" style="color: darkred;"></h2>
+                </div>
+                <p class="" style="font-weight: bold;">
+                    Please find below the project details that needs attention:
+				</p>
+                <div class="container w-25">
+                    <div class="row">
+						<div class="col" id="project_name">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col"  id="adapter_code">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="fixture_type">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="owner_email">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="contacts">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="contacts_limit">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="warning_at">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="resets">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="testprobes">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="modified_by">
+							null
+						</div>
+					</div>
+			
+					<div class="row">
+						<div class="col" id="last_update">
+							null
+						</div>
+					</div>
+                </div>
+				<p style="margin-top: 2.5rem; font-weight: bold;">Regards,</p>
+				<p style="font-weight: bold;">Test Engineering Team</p>
+			</div>
+			<hr style="margin-top: 1rem; margin-bottom: 1rem" />
+			<div style="text-align: center; font-size: 10px">
+				<p style="text-align: center">
+                    This email was sent automatically by our IT system. For any additional information please contact your administrator.
+				</p>
+				<a href="https://www.continental.com/en/" target="_blank" rel="noreferrer"
+					><img
+						src="https://cdn.continental.com/_assets/1ea205344a72e174bb6103d4cfe6e63c/Icons/Favicons/favicon-32.png"
+						style="margin-top: 1rem; margin-bottom: 2rem; border-radius: 10px"
+						width="auto"
+						height="40"
+				/></a>
+			</div>
+		</div>
+	</body>
 </html>

@@ -1,4 +1,3 @@
-import { Project } from "./projectType";
 import { parse } from "node-html-parser";
 import { ProjectDictionary } from "./projectType";
 
@@ -23,30 +22,29 @@ export const parseHtmlFile = (
 
   switch (projectDictionary.issue) {
     case "reset":
-      textToBeAddedForPriorityTag = "The counter value for the adapter below was reseted. This message has low priority - Warning";
+      textToBeAddedForPriorityTag = "The counter value for the the equipment below has been reseted!";
       classToBeAddedForPriorityTag = "text-danger";
       break;
     case "limit":
-      textToBeAddedForPriorityTag = "The adapter below has reached its contact limit, please consider taking the maintanance ASAP. This message has high priority - Alert";
+      textToBeAddedForPriorityTag = "The equipment below has exceeded the maximum contacts limit! Please take into consideration the maintenance as soon as possible!";
       classToBeAddedForPriorityTag = "text-danger";
       break;
     case "warning":
-      textToBeAddedForPriorityTag = "The adapter below has reached its contact warning, please consider scheduling the maintanance soon. This message has low priority - Warning";
+      textToBeAddedForPriorityTag = "The equipment below has exceeded the contacts warning limit! Please take into consideration scheduling the maintenance soon!";
       classToBeAddedForPriorityTag = "text-warning";
       break;
     case "limit_change":
-      textToBeAddedForPriorityTag = "The limits for the adapter below were modified. This message has low priority - Warning";
+      textToBeAddedForPriorityTag = "The limits for the equipment below have been modified!";
       classToBeAddedForPriorityTag = "text-warning";
       break;
     case "owner_change":
-      textToBeAddedForPriorityTag = "The limits for the adapter below were modified. This message has low priority - Warning";
+      textToBeAddedForPriorityTag = "The owner for the equipment below has been modified!";
       classToBeAddedForPriorityTag = "text-warning";
       break;    
 
     default:
-      textToBeAddedForPriorityTag =
-        "If you receive this error, please contact your administrator!";
-      classToBeAddedForPriorityTag = "test-danger";
+      textToBeAddedForPriorityTag = "If you receive this error, please contact your administrator!";
+      classToBeAddedForPriorityTag = "text-danger";
       break;
   }
 
@@ -65,19 +63,19 @@ export const parseHtmlFile = (
   root.getElementById("owner_email").innerHTML =
     "Owner email: " + projectDictionary.project.owner_email;
   root.getElementById("contacts").innerHTML =
-    "Contacts:" + projectDictionary.project.contacts.toString();
+    "Contacts: " + projectDictionary.project.contacts.toString();
   root.getElementById("contacts_limit").innerHTML =
-    "Contacts limit:" + projectDictionary.project.contacts_limit.toString();
+    "Contacts limit: " + projectDictionary.project.contacts_limit.toString();
   root.getElementById("warning_at").innerHTML =
-    "Warning at:" + projectDictionary.project.warning_at.toString();  
+    "Warning at: " + projectDictionary.project.warning_at.toString();  
   root.getElementById("resets").innerHTML =
-    "Resets:" + projectDictionary.project.resets.toString(); 
+    "Resets: " + projectDictionary.project.resets.toString(); 
   root.getElementById("testprobes").innerHTML =
     "Required test probes: " + projectDictionary.project.testprobes;   
   root.getElementById("modified_by").innerHTML =
-    "Modified by:" + projectDictionary.project.modified_by.toString(); 
+    "Modified by: " + projectDictionary.project.modified_by.toString(); 
   root.getElementById("last_update").innerHTML =
-    "Last update:" + projectDictionary.project.last_update.toString();         
+    "Last update: " + projectDictionary.project.last_update.toString();         
 
   let parsedHtmlContent = root.toString();
   return parsedHtmlContent;
