@@ -26,7 +26,7 @@ export const parseHtmlFile = (
       classToBeAddedForPriorityTag = "text-danger";
       break;
     case "limit":
-      textToBeAddedForPriorityTag = "The equipment below has exceeded the maximum contacts limit! Please take into consideration the maintenance as soon as possible!";
+      textToBeAddedForPriorityTag = "The equipment below has exceeded the maximum contact limit! Please take into consideration the maintenance as soon as possible!";
       classToBeAddedForPriorityTag = "text-danger";
       break;
     case "warning":

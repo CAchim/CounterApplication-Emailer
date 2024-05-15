@@ -47,19 +47,19 @@ async function main() {
       let Subject = ''
       switch (item.issue) {
         case 'reset':
-          Subject = 'Conter value was reseted'
+          Subject = 'Conter value for has been changed'
           break
         case 'limit':
-          Subject = 'Adapter has reached contacts limit'
+          Subject = 'The equipment has exceeded the maximum contacts limit'
           break
         case 'warning':
-          Subject = 'Adapter has reached contacts warning'
+          Subject = 'The equipment has exceeded the maximum contact limit'
           break
         case 'limit_change':
-          Subject = 'Adapter contacts limits were changed'
+          Subject = 'The limits for the equipment have been modified'
           break 
         case 'owner_change':
-          Subject = 'Adapter owner was changed'
+          Subject = 'The owner for the equipment has been modified'
           break
 
         default:
@@ -147,8 +147,7 @@ async function main() {
       }
     })
 
-    //await sleep(1000 * 60 * 15);
-    await sleep(10000)
+    await sleep(1000 * 60 * 15);
     oldProjectsFromDB = projectsFromDB.slice()
   }
 }
